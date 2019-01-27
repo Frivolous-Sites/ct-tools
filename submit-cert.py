@@ -54,7 +54,7 @@ num_certs = 0
 for c in args.cert:
 	lines = ''.join(c.readlines())
 	if lines.count('-----BEGIN CERTIFICATE-----') > 1:
-		print "Error: Specify one certificate per file, with multiple --cert arguments, in the order of leaf, intermediate, root"
+		print("Error: Specify one certificate per file, with multiple --cert arguments, in the order of leaf, intermediate, root")
 		sys.exit(-1)
 	lines = lines.replace("-----BEGIN CERTIFICATE-----", "")
 	lines = lines.replace("-----END CERTIFICATE-----", "")
